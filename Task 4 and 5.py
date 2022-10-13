@@ -7,26 +7,35 @@ list1 = []
 for i in range(len_list):
     list1.append(random.randint(-range_random, range_random))
     
-print(list1)
+print(f'Это список случайных чисел: {list1})
 
 list_find_index = []
 len_find_index = int(input('Введите число, сколько ходите сложить индексов'))
 if len_find_index > len_list:
-    print('Вы ввели количество сложений большего заданного списка, попробуйте еще: ')
     
-else:
-    for i in range (len_find_index):
-        list_find_index.append(int(input('Введи индекс для суммы: ')))
+    while  len_find_index > len_list or len_find_index < 0 :
+        print('Вы ввели количество сложений большего заданного списка, попробуйте еще: ')
+        len_find_index = int(input('Введите число, сколько ходите сложить индексов'))
+    
+
+for i in range (len_find_index):
+    index = (int(input('Введи индекс для суммы: ')))
+    if index > len_list or index <0:
+        
+        while  index > len_list or index < 0:
+            print('Такого индекса в списке нет, попробуйте еще раз')
+            index = (int(input('Введи индекс для суммы: ')))
+        
+    list_find_index.append(index)
 sum = 0        
 print (f' Это список индексов для сложения :{list_find_index}')
 for i in range (len_find_index):
     sum += list1[list_find_index[i]]
-print (f'Сумма заданных индексов равна :{sum}')
+print (f'Сумма элементов заданных индексов равна :{sum}')
 
 
 print('Произвожу произвольное перемешивание списка: ')
-def num_randon(n):
-    num = (random.randrange(n))
+
 random_list = []
 num = 0
 for i in range (len_list):

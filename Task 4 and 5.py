@@ -14,8 +14,8 @@ len_find_index = int(input('Введите число, сколько ходит
 if len_find_index > len_list:
     
     while  len_find_index > len_list or len_find_index < 0 :
-        print('Вы ввели количество сложений большего заданного списка, попробуйте еще: ')
-        len_find_index = int(input('Введите число, сколько ходите сложить индексов'))
+        print('Вы ввели количество сложений ВНЕ заданного списка, попробуйте еще: ')
+        len_find_index = int(input('Введите правильное число, сколько ходите сложить индексов'))
     
 
 for i in range (len_find_index):

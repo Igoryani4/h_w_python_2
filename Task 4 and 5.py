@@ -7,7 +7,7 @@ list1 = []
 for i in range(len_list):
     list1.append(random.randint(-range_random, range_random))
     
-print(f'Это список случайных чисел: {list1})
+print(f'Это список случайных чисел: {list1}')
 
 list_find_index = []
 len_find_index = int(input('Введите число, сколько ходите сложить индексов'))

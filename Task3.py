@@ -5,7 +5,7 @@
 #     Для n=4 {1: 2, 2: 2.25, 3: 2.37, 4: 2.44}
 #     Сумма 9.06
 
-from multiprocessing.sharedctypes import Value
+
 
 
 n = int(input('Enter number: ')) 

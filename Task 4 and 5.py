@@ -14,28 +14,28 @@ for i in range(len_list):
 print(f'Это список случайных чисел: {list1}')
 
 list_find_index = []
-len_find_index = int(input('Введите число, сколько ходите сложить индексов'))
+len_find_index = int(input('Введите число, сколько ходите умножить индексов'))
 if len_find_index > len_list:
     
     while  len_find_index > len_list or len_find_index < 0 :
         print('Вы ввели количество сложений ВНЕ заданного списка, попробуйте еще: ')
-        len_find_index = int(input('Введите правильное число, сколько ходите сложить индексов'))
+        len_find_index = int(input('Введите правильное число, сколько ходите умножить индексов'))
     
 
 for i in range (len_find_index):
-    index = (int(input('Введи индекс для суммы: ')))
+    index = (int(input('Введи индекс для умножения: ')))
     if index > len_list or index <0:
         
         while  index > len_list or index < 0:
             print('Такого индекса в списке нет, попробуйте еще раз')
-            index = (int(input('Введи индекс для суммы: ')))
+            index = (int(input('Введи индекс для умножиения: ')))
         
     list_find_index.append(index)
-sum = 0        
-print (f' Это список индексов для сложения :{list_find_index}')
+mult = 0        
+print (f' Это список индексов для произведения :{list_find_index}')
 for i in range (len_find_index):
-    sum += list1[list_find_index[i]]
-print (f'Сумма элементов заданных индексов равна :{sum}')
+    mult *= list1[list_find_index[i]]
+print (f'Произведение элементов заданных индексов равна :{mult}')
 
 
 print('Произвожу произвольное перемешивание списка: ')
